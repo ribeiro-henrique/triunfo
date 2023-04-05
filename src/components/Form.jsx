@@ -26,7 +26,7 @@ class Form extends React.Component {
             onChange={ onInputChange }
             data-testid="name-input"
             type="text"
-            name=""
+            name="cardName"
             id=""
           />
         </label>
@@ -36,7 +36,7 @@ class Form extends React.Component {
             value={ cardDescription }
             onChange={ onInputChange }
             data-testid="description-input"
-            name=""
+            name="cardDescription"
             id=""
             cols="30"
             rows="10"
@@ -49,7 +49,7 @@ class Form extends React.Component {
             onChange={ onInputChange }
             data-testid="attr1-input"
             type="number"
-            name=""
+            name="cardAttr1"
             id=""
           />
         </label>
@@ -60,7 +60,7 @@ class Form extends React.Component {
             onChange={ onInputChange }
             data-testid="attr2-input"
             type="number"
-            name=""
+            name="cardAttr2"
             id=""
           />
         </label>
@@ -71,7 +71,7 @@ class Form extends React.Component {
             onChange={ onInputChange }
             data-testid="attr3-input"
             type="number"
-            name=""
+            name="cardAttr3"
             id=""
           />
         </label>
@@ -82,7 +82,7 @@ class Form extends React.Component {
             onChange={ onInputChange }
             data-testid="image-input"
             type="text"
-            name=""
+            name="cardImage"
             id=""
           />
         </label>
@@ -92,7 +92,7 @@ class Form extends React.Component {
             value={ cardRare }
             onChange={ onInputChange }
             data-testid="rare-input"
-            name=""
+            name="cardRare"
             id=""
           >
             <option value="normal">normal</option>
@@ -107,7 +107,7 @@ class Form extends React.Component {
             onChange={ onInputChange }
             data-testid="trunfo-input"
             type="checkbox"
-            name=""
+            name="cardTrunfo"
             id=""
           />
         </label>

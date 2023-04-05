@@ -13,11 +13,11 @@ class Card extends React.Component {
       cardRare,
       cardTrunfo,
     } = this.props;
+
     return (
       <section>
         <p data-testid="name-card">
           { cardName }
-
         </p>
         <img data-testid="image-card" src={ cardImage } alt={ cardName } />
         <p data-testid="description-card">

@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './components/Card';
 import Form from './components/Form';
+import './index.css';
 
 class App extends React.Component {
   state = {
@@ -10,13 +11,14 @@ class App extends React.Component {
     cardAttr2: '',
     cardAttr3: '',
     cardImage: '',
-    cardRare: '',
+    cardRare: 'normal',
     cardTrunfo: false,
   };
 
   handleChange = (event) => {
     const { target } = event;
-    const { value, name, type } = target;
+    const { value, name } = target;
+    console.log(value);
 
     this.setState({
       [name]: value,
@@ -24,12 +26,43 @@ class App extends React.Component {
   };
 
   render() {
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+    } = this.state;
+
     return (
-      <div>
-        <h1>Adicione Nova Carta</h1>
-        <Form />
-        <Card />
-      </div>
+      <article>
+        <h1>Trunfo!</h1>
+        <Form
+          onInputChange={ this.handleChange }
+          cardName={ cardName }
+          cardDescription={ cardDescription }
+          cardAttr1={ cardAttr1 }
+          cardAttr2={ cardAttr2 }
+          cardAttr3={ cardAttr3 }
+          cardImage={ cardImage }
+          cardRare={ cardRare }
+          cardTrunfo={ cardTrunfo }
+        />
+        <Card
+          card-name={ cardName }
+          card-describe={ cardDescription }
+          card-value1={ cardAttr1 }
+          card-value2={ cardAttr2 }
+          card-value3={ cardAttr3 }
+          card-img={ cardImage }
+          card-rare={ cardRare }
+          card-tryunph={ cardTrunfo }
+          onInputChange={ this.handleChange }
+        />
+      </article>
     );
   }
 }
