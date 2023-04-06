@@ -15,6 +15,7 @@ class App extends React.Component {
     cardTrunfo: false,
     isSaveButtonDisabled: true,
     board: [], // dica, array vazio para receber o obj
+    hasTrunfo: false,
   };
 
   onSaveButtonClick = () => {
@@ -27,6 +28,8 @@ class App extends React.Component {
       cardRare,
       cardImage,
       board,
+      cardTrunfo,
+      hasTrunfo, // conforme preconizado na mentoria
     } = this.state;
 
     const myObject = {
@@ -50,6 +53,7 @@ class App extends React.Component {
       cardRare: 'normal',
       cardTrunfo: false,
       isSaveButtonDisabled: true,
+      hasTrunfo: cardTrunfo ? true : hasTrunfo, // lógica conforme mentoria
     });
   };
 
@@ -82,17 +86,16 @@ class App extends React.Component {
 
     this.setState({
       isSaveButtonDisabled: !(valName && describe && rare
-          && imaage && firstA && secondA && thirdA && sumSum),
+        && imaage && firstA && secondA && thirdA && sumSum),
     });
   };
 
   handleChange = (event) => {
     const { target } = event;
-    const { value, name } = target;
-    console.log(value);
+    const { value, name, type, checked } = target;
 
     this.setState({
-      [name]: value,
+      [name]: type === 'checkbox' ? checked : value,
     }, () => {
       this.validationIputs();
     });
@@ -109,6 +112,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       isSaveButtonDisabled,
+      hasTrunfo,
     } = this.state;
 
     return (
@@ -127,6 +131,7 @@ class App extends React.Component {
             cardTrunfo={ cardTrunfo }
             isSaveButtonDisabled={ isSaveButtonDisabled }
             onSaveButtonClick={ this.onSaveButtonClick }
+            hasTrunfo={ hasTrunfo }
           />
           <Card
             onInputChange={ this.handleChange }
@@ -138,6 +143,7 @@ class App extends React.Component {
             cardImage={ cardImage }
             cardRare={ cardRare }
             cardTrunfo={ cardTrunfo }
+            hasTrunfo={ hasTrunfo }
           />
         </article>
       </main>
