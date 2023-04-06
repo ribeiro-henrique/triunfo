@@ -52,15 +52,15 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
         />
         <Card
-          card-name={ cardName }
-          card-describe={ cardDescription }
-          card-value1={ cardAttr1 }
-          card-value2={ cardAttr2 }
-          card-value3={ cardAttr3 }
-          card-img={ cardImage }
-          card-rare={ cardRare }
-          card-tryunph={ cardTrunfo }
           onInputChange={ this.handleChange }
+          cardName={ cardName }
+          cardDescription={ cardDescription }
+          cardAttr1={ cardAttr1 }
+          cardAttr2={ cardAttr2 }
+          cardAttr3={ cardAttr3 }
+          cardImage={ cardImage }
+          cardRare={ cardRare }
+          cardTrunfo={ cardTrunfo }
         />
       </article>
     );
