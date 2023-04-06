@@ -28,23 +28,24 @@ class App extends React.Component {
     } = this.state;
 
     const valName = cardName.length > 0;
+    const num1 = Number(cardAttr1);
+    const num2 = Number(cardAttr2);
+    const num3 = Number(cardAttr3);
     const describe = cardDescription.length > 0;
     const rare = cardRare.length > 0;
     const imaage = cardImage.length > 0;
     const unitValue = 90;
     const groupValue = 210;
 
-    const firstA = Number(cardAttr1 >= 0 && cardAttr1 <= unitValue);
-    const secondA = Number(cardAttr2 >= 0 && cardAttr2 <= unitValue);
-    const thirdA = Number(cardAttr3 >= 0 && cardAttr3 <= unitValue);
+    const firstA = num1 >= 0 && num1 <= unitValue;
+    const secondA = num2 >= 0 && num2 <= unitValue;
+    const thirdA = num3 >= 0 && num3 <= unitValue;
 
-    const sumSum = firstA + secondA + thirdA;
-
-    const attSum = sumSum <= groupValue;
+    const sumSum = (num1 + num2 + num3) <= groupValue;
 
     this.setState({
       isSaveButtonDisabled: !(valName && describe && rare
-          && imaage && firstA && secondA && thirdA && attSum),
+          && imaage && firstA && secondA && thirdA && sumSum),
     });
   };
 
