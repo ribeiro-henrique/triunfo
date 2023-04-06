@@ -12,7 +12,7 @@ h1 {
   color: #333;
   text-align: center;
   text-shadow: 2px 2px #fff;
-  background-color: #ff7b7b;
+  background-color: #dd5c57;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -58,7 +58,7 @@ button {
   font-size: 16px;
   border: none;
   border-radius: 4px;
-  background-color: #ce2b2b;
+  background-color: #b61e1e;
   color: #fff;
   cursor: pointer;
   margin-top: 10px;

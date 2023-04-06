@@ -24,13 +24,25 @@ class Card extends React.Component {
           { cardDescription }
         </p>
         <p data-testid="attr1-card">
-          { cardAttr1 }
+          Força:
+          {' '}
+          <span>
+            { cardAttr1 }
+          </span>
         </p>
         <p data-testid="attr2-card">
-          { cardAttr2 }
+          Agilidade:
+          {' '}
+          <span>
+            { cardAttr2 }
+          </span>
         </p>
         <p data-testid="attr3-card">
-          { cardAttr3 }
+          Stamina:
+          {' '}
+          <span>
+            { cardAttr3 }
+          </span>
         </p>
         <p data-testid="rare-card">
           { cardRare }
