@@ -115,6 +115,8 @@ class App extends React.Component {
       hasTrunfo,
     } = this.state;
 
+    const { board } = this.state;
+
     return (
       <main>
         <h1>Trunfo!</h1>
@@ -146,6 +148,22 @@ class App extends React.Component {
             hasTrunfo={ hasTrunfo }
           />
         </article>
+        <div>
+          { board.map((e) => (
+            <Card
+              key={ Math.random() }
+              cardName={ e.cardName }
+              cardDescription={ e.cardDescription }
+              cardAttr1={ e.cardAttr1 }
+              cardAttr2={ e.cardAttr2 }
+              cardAttr3={ e.cardAttr3 }
+              cardImage={ e.cardImage }
+              cardRare={ e.cardRare }
+              cardTrunfo={ e.cardTrunfo }
+              hasTrunfo={ e.hasTrunfo }
+            />
+          )) }
+        </div>
       </main>
     );
   }
