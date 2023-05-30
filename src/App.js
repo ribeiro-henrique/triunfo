@@ -148,6 +148,9 @@ class App extends React.Component {
             hasTrunfo={ hasTrunfo }
           />
         </article>
+        <section>
+          <h2>Seus Cards!</h2>
+        </section>
         <div>
           { board.map((e) => (
             <Card
